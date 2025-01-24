@@ -7,7 +7,7 @@ RUN pip install -r requirements.txt
 
 VOLUME ["/data"]
 WORKDIR /app
-COPY ingest.py .
+# COPY ingest.py .
 
 ENTRYPOINT [ "python", "ingest.py" ]
 
