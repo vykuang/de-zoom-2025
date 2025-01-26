@@ -35,27 +35,30 @@ def main(conn_params):
         df_zones = pd.read_csv(uri)
         df_zones.to_sql(name='zones', con=engine, if_exists='replace')
     else:
-        df_iter = pd.read_csv(f'/data/{uri.name}', iterator=True, chunksize=100000)
+        df_iter = pd.read_csv(f'/data/{uri.name}', compression='gzip', iterator=True, chunksize=10000)
         # first chunk to create table
         df = next(df_iter)
+        # df = pd.read_csv(f'/data/{uri.name}')
         df.lpep_pickup_datetime = pd.to_datetime(df.lpep_pickup_datetime)
         df.lpep_dropoff_datetime = pd.to_datetime(df.lpep_dropoff_datetime)
         
         df.head(n=0).to_sql(name=tbl, con=engine, if_exists='replace')
         df.to_sql(name=tbl, con=engine, if_exists='append')
+        nrows = len(df)
         print(f'inserted {len(df)} rows')
 
-        for df in df_iter:
-            ta = time()
-            df = next(df_iter)
+        # for df in df_iter:
+        #     ta = time()
+        #     df = next(df_iter)
+        #     nrows += len(df)
 
-            df.lpep_pickup_datetime = pd.to_datetime(df.lpep_pickup_datetime)
-            df.lpep_dropoff_datetime = pd.to_datetime(df.lpep_dropoff_datetime)
+        #     df.lpep_pickup_datetime = pd.to_datetime(df.lpep_pickup_datetime)
+        #     df.lpep_dropoff_datetime = pd.to_datetime(df.lpep_dropoff_datetime)
 
-            df.to_sql(name=tbl, con=engine, if_exists='append')
-            tb = time()
-            print(f'inserted {len(df)} rows in {tb-ta:.3f} sec')
-    print('finish ingesting into postgres')
+        #     df.to_sql(name=tbl, con=engine, if_exists='append')
+        #     tb = time()
+        #     print(f'inserted {len(df)} rows in {tb-ta:.3f} sec')
+    print(f'{nrows} rows ingested into postgres')
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
