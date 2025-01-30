@@ -1,2 +1,5 @@
+# chunks
 /data
-
+# secrets
+/secrets
+*.pem
