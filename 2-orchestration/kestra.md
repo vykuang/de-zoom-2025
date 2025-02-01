@@ -47,7 +47,6 @@ docker run -ti -e CLOUDSDK_CONFIG=/config/gcloud \
 alias gcloud="docker run -it --rm \
     -v $HOME/.config/gcloud-de-zoom:/root/.config/gcloud \
     asia.gcr.io/google.com/cloudsdktool/google-cloud-cli:508.0.0-stable gcloud"
-
 alias gsutil="docker run -it --rm \
     -v $HOME/.config/gcloud-de-zoom:/root/.config/gcloud \
     asia.gcr.io/google.com/cloudsdktool/google-cloud-cli:508.0.0-stable gsutil"
@@ -56,3 +55,18 @@ alias bq="docker run -it --rm \
     -v $HOME/.config/gcloud-de-zoom:/root/.config/gcloud \
     asia.gcr.io/google.com/cloudsdktool/google-cloud-cli:508.0.0-stable bq"
 ```
+
+## flows
+
+- add GCP credentials to kestra key-value store under the namespace for it to be used by other flows inside the same namespace
+    - use UI editor to put in the contents of the json key
+    - the yaml flow with the json key cannot be committed to git
+
+## homework
+
+1. filesize - 128.3
+1. rendered: green_tripdata_2020-04.csv
+1. row count - yellow, 2020: (run locally)
+1. row count - green, 2020:
+1. row count - yellow, 2021:
+1. timezone config: America/New_York
