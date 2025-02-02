@@ -66,7 +66,7 @@ alias bq="docker run -it --rm \
 
 1. filesize - 128.3
 1. rendered: green_tripdata_2020-04.csv
-1. row count - yellow, 2020: (run locally)
-1. row count - green, 2020:
-1. row count - yellow, 2021:
+1. row count - yellow, 2020: (run locally) 21641237 - 1925152 = 19,715,885
+1. row count - green, 2020: 1734051
+1. row count - yellow, 2021 march: 1925152
 1. timezone config: America/New_York

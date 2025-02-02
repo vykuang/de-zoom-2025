@@ -13,8 +13,8 @@ inputs:
   - id: year
     type: SELECT
     displayName: Select year
-    values: ["2019", "2020"]
-    defaults: "2019"
+    values: ["2019", "2020", "2021"]
+    defaults: "2021"
 
   - id: month
     type: SELECT
@@ -266,5 +266,5 @@ pluginDefaults:
   - type: io.kestra.plugin.jdbc.postgresql
     values:
       url: jdbc:postgresql://host.docker.internal:5432/postgres-zoomcamp
-      username: kestra
-      password: k3str4
+      username: postgres
+      password: postgres
