@@ -1,0 +1,11 @@
+{
+  "parquetOptions": {
+    "enableListInference": false,
+    "enumAsString": false,
+    "mapTargetType": null
+  },
+  "sourceFormat": "PARQUET",
+  "sourceUris": [
+    "gs://de_zoom_2025/*.parquet"
+  ]
+}
