@@ -1,0 +1,102 @@
+[0m23:26:30.649842 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f06a1e35bb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f06a1e371a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f06a13c5010>]}
+
+
+============================== 23:26:30.653113 | eaf98a5f-f83a-4c15-8820-7ba9c4b454fd ==============================
+[0m23:26:30.653113 [info ] [MainThread]: Running with dbt=1.9.2
+[0m23:26:30.653510 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/kohada/.dbt', 'debug': 'False', 'version_check': 'True', 'log_path': 'logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'invocation_command': 'dbt init', 'introspect': 'True', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m23:26:34.373184 [debug] [MainThread]: Starter project path: /home/kohada/.virtualenvs/de-zoom-2025--_im2yM0-py3.12/lib/python3.12/site-packages/dbt/include/starter_project
+[0m23:26:34.382210 [info ] [MainThread]: 
+Your new dbt project "nytaxi" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m23:26:34.382582 [info ] [MainThread]: Setting up your profile.
+[0m23:26:45.589190 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 14.999917, "process_in_blocks": "3144", "process_kernel_time": 0.139174, "process_mem_max_rss": "89084", "process_out_blocks": "64", "process_user_time": 0.855772}
+[0m23:26:45.589618 [debug] [MainThread]: Command `dbt init` succeeded at 23:26:45.589534 after 15.00 seconds
+[0m23:26:45.589904 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f06a2fe58b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f06a184c890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f06a150a4b0>]}
+[0m23:26:45.590207 [debug] [MainThread]: Flushing usage events
+[0m23:26:46.655145 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:27:24.955667 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6406e02f30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6406b6dd00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f64071426c0>]}
+
+
+============================== 23:27:24.958046 | 165677f8-36cf-480e-b305-85c92e2889de ==============================
+[0m23:27:24.958046 [info ] [MainThread]: Running with dbt=1.9.2
+[0m23:27:24.958437 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/kohada/.dbt', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt debug', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m23:27:24.964248 [info ] [MainThread]: dbt version: 1.9.2
+[0m23:27:24.964517 [info ] [MainThread]: python version: 3.12.2
+[0m23:27:24.964770 [info ] [MainThread]: python path: /home/kohada/.virtualenvs/de-zoom-2025--_im2yM0-py3.12/bin/python
+[0m23:27:24.965026 [info ] [MainThread]: os info: Linux-6.6.36.3-microsoft-standard-WSL2-x86_64-with-glibc2.35
+[0m23:27:25.775400 [info ] [MainThread]: Using profiles dir at /home/kohada/.dbt
+[0m23:27:25.775825 [info ] [MainThread]: Using profiles.yml file at /home/kohada/.dbt/profiles.yml
+[0m23:27:25.776126 [info ] [MainThread]: Using dbt_project.yml file at /home/kohada/de-zoom-2025/4-dbt/dbt_project.yml
+[0m23:27:25.776391 [info ] [MainThread]: adapter type: bigquery
+[0m23:27:25.776648 [info ] [MainThread]: adapter version: 1.9.1
+[0m23:27:25.776912 [info ] [MainThread]: Configuration:
+[0m23:27:25.777167 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m23:27:25.777435 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m23:27:25.777698 [info ] [MainThread]: Required dependencies:
+[0m23:27:25.777968 [debug] [MainThread]: Executing "git --help"
+[0m23:27:25.779366 [debug] [MainThread]: STDOUT: "b"usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m23:27:25.779796 [debug] [MainThread]: STDERR: "b''"
+[0m23:27:25.780068 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m23:27:25.780471 [info ] [MainThread]: Connection:
+[0m23:27:25.781192 [info ] [MainThread]:   method: service-account
+[0m23:27:25.781757 [info ] [MainThread]:   database: de-zoom-376014
+[0m23:27:25.782073 [info ] [MainThread]:   execution_project: de-zoom-376014
+[0m23:27:25.782555 [info ] [MainThread]:   schema: zoomcamp_nytaxi
+[0m23:27:25.782913 [info ] [MainThread]:   location: US
+[0m23:27:25.783202 [info ] [MainThread]:   priority: interactive
+[0m23:27:25.783466 [info ] [MainThread]:   maximum_bytes_billed: None
+[0m23:27:25.783735 [info ] [MainThread]:   impersonate_service_account: None
+[0m23:27:25.783996 [info ] [MainThread]:   job_retry_deadline_seconds: None
+[0m23:27:25.784252 [info ] [MainThread]:   job_retries: 1
+[0m23:27:25.784505 [info ] [MainThread]:   job_creation_timeout_seconds: None
+[0m23:27:25.784755 [info ] [MainThread]:   job_execution_timeout_seconds: 300
+[0m23:27:25.785011 [info ] [MainThread]:   timeout_seconds: 300
+[0m23:27:25.785256 [info ] [MainThread]:   client_id: None
+[0m23:27:25.785504 [info ] [MainThread]:   token_uri: None
+[0m23:27:25.785748 [info ] [MainThread]:   dataproc_region: None
+[0m23:27:25.785991 [info ] [MainThread]:   dataproc_cluster_name: None
+[0m23:27:25.786253 [info ] [MainThread]:   gcs_bucket: None
+[0m23:27:25.786495 [info ] [MainThread]:   dataproc_batch: None
+[0m23:27:25.786854 [info ] [MainThread]: Registered adapter: bigquery=1.9.1
+[0m23:27:25.868286 [debug] [MainThread]: Acquiring new bigquery connection 'debug'
+[0m23:27:25.868628 [debug] [MainThread]: On debug: select 1 as id
+[0m23:27:25.868912 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m23:27:25.869209 [debug] [MainThread]: BigQuery adapter: Got an error when attempting to create a bigquery " "client: '[Errno 2] No such file or directory: '~/de-zoom-2025/secrets/gcp-key.json''
+[0m23:27:25.869482 [debug] [MainThread]: BigQuery adapter: Unhandled error while running:
+select 1 as id
+[0m23:27:25.869715 [debug] [MainThread]: BigQuery adapter: Database Error
+  [Errno 2] No such file or directory: '~/de-zoom-2025/secrets/gcp-key.json'
+[0m23:27:25.869978 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m23:27:25.870290 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m23:27:25.870546 [info ] [MainThread]: Project loading failed for the following reason:
+ project path </home/kohada/de-zoom-2025/4-dbt/dbt_project.yml> not found
+
+[0m23:27:25.870813 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >'NoneType' object has no attribute 'close'
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m23:27:25.871594 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 0.973197, "process_in_blocks": "178912", "process_kernel_time": 0.314637, "process_mem_max_rss": "207632", "process_out_blocks": "24", "process_user_time": 1.51419}
+[0m23:27:25.871988 [debug] [MainThread]: Command `dbt debug` failed at 23:27:25.871887 after 0.97 seconds
+[0m23:27:25.872352 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f640739bce0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f640671d010>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f63f06cce30>]}
+[0m23:27:25.872700 [debug] [MainThread]: Flushing usage events
+[0m23:27:26.922728 [debug] [MainThread]: An error was encountered while trying to flush usage events

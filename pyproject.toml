@@ -8,6 +8,8 @@ dependencies = [
     "psycopg-binary",
     "sqlalchemy",
     "pandas",
+    "dbt-core (>=1.9.2,<2.0.0)",
+    "dbt-bigquery (>=1.9.1,<2.0.0)",
 ]
 [tool.poetry]
 description = ""
