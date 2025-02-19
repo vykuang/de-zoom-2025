@@ -1,0 +1,8 @@
+sources:
+  - name: staging
+    database: de-zoom-376014
+    schema: zoomcamp_nytaxi
+
+    tables:
+      - name: green_tripdata
+      - name: yellow_taxi_part
