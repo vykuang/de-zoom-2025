@@ -109,3 +109,26 @@ CREATE TABLE `zoomcamp_nytaxi.yellow_taxi_nonpart` AS (
     - cardinality is an important metric - if too high
 1. count(*) is a cached metadata and thus cost 0 B; if a date filter was added, data will be processed
 
+
+### external table from GCS
+
+```SQL
+DROP TABLE IF EXISTS `de-zoom-376014.zoomcamp_nytaxi.fhv_tripdata`;
+CREATE OR REPLACE EXTERNAL TABLE `de-zoom-376014.zoomcamp_nytaxi.fhv_tripdata`
+  OPTIONS (
+    format ="parquet",
+    uris = ['gs://de_zoom_2025/nytaxi/raw/fhv/*.parquet']
+    );
+
+    DROP TABLE IF EXISTS `de-zoom-376014.zoomcamp_nytaxi.yellow_tripdata`;
+CREATE OR REPLACE EXTERNAL TABLE `de-zoom-376014.zoomcamp_nytaxi.yellow_tripdata`
+  OPTIONS (
+    format ="parquet",
+    uris = ['gs://de_zoom_2025/nytaxi/raw/yellow/*.parquet']
+    );
+    DROP TABLE IF EXISTS `de-zoom-376014.zoomcamp_nytaxi.green_tripdata`;
+CREATE OR REPLACE EXTERNAL TABLE `de-zoom-376014.zoomcamp_nytaxi.green_tripdata`
+  OPTIONS (
+    format ="parquet",
+    uris = ['gs://de_zoom_2025/nytaxi/raw/green/*.parquet']
+    );

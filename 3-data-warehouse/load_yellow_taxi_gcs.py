@@ -6,7 +6,7 @@ import time
 
 
 #Change this to your bucket name
-BUCKET_NAME = "de-zoom-2025"  
+BUCKET_NAME = "de_zoom_2025"  
 
 #If you authenticated through the GCP SDK you can comment out these two lines
 CREDENTIALS_FILE = "../secrets/gcp-key.json"  
